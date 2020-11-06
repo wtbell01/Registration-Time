@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/54d99b3e75.js" crossorigin="anonymous"></script>
+  <title>Registration</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header-container">
+    <div class="header">
+      <!--Header Logo-->
+      <div class="header-logo">
+        <!--Top half of the logo holding the icon-->
+        <div class="header-logo-top">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="header-logo-bottom">
+          <h1 class="header-logo-bottom-text">Register</h1>
+        </div>
+      </div>
+
+      <!--Header Menu/Navigation-->
+      <ul class="header-menu">
+        <li class="header-menu-list-item"><a href="" class="header-menu-link header-menu-link-dark">About</a></li>
+        <li class="header-menu-list-item"><a href="" class="header-menu-link header-menu-link-dark">Academics</a></li>
+        <li class="header-menu-list-item"><a href="" class="header-menu-link header-menu-link-dark">Athletics</a></li>
+        <li class="header-menu-list-item"><a href="" class="header-menu-link">Connect</a></li>
+        <li class="header-menu-list-item"><a href="" class="header-menu-link">Explore</a></li>
+      </ul>
+
+      <!--Header Search Bar-->
+      <div class="header-search-bar-container">
+        <input type="search" class="header-search-bar" placeholder="Search...">
+      </div>
+    </div>
+  </header>
+
+  <!--Register Title-->
+  <h2 class="register-title">Register</h2>
+
+  <!--Registration form-->
+  <form id="registration-form" class="registration-form">
+    <!--First section - Last name label and input-->
+    <div class="registration-section last-name-section">
+      <!--Last name label-->
+      <label class="registration-label" for="last-name">Enter Last Name:</label>
+      <!--Last name input-->
+      <input type="text" id="last-name-input" class="last-name-input">
+    </div>
+
+    <!--Second section - Class and radio buttons--> 
+    <div class="registration-section">
+      <!--Classification label-->
+      <label class="registration-label" for="classification">Select classification:</label>
+      <!--Classification inputs-->
+      <div class="classification-inputs">
+        <!--Classification box - Holds Senior button and corresponing year-->
+        <div class="classification-box">
+          <input type="radio" name="senior" id="senior-button" class="classification-button">
+          <label class="classification-label" for="senior-button">Senior</label>
+        </div>
+        <!--Classification box - Holds Junior button and corresponing year-->
+        <div class="classification-box">
+          <input type="radio" name="junior" id="junior-button" class="classification-button">
+          <label class="classification-label" for="junior-button">Junior</label>
+        </div>
+        <!--Classification box - Holds Sophomore button and corresponing year-->
+        <div class="classification-box">
+          <input type="radio" name="sophomore" id="sophomore-button" class="classification-button">
+          <label class="classification-label" for="sophomore-button">Sophomore</label>
+        </div>
+        <!--Classification box - Holds Freshman button and corresponing year-->
+        <div class="classification-box">
+          <input type="radio" name="freshman" id="freshman-button" class="classification-button">
+          <label class="classification-label" for="freshman-button">Freshman</label>
+        </div>
+      </div>
+    </div>
+
+    <!--Output section-->
+    <div id="output-section" class="registration-section">
+      <label for="output-time-date" class="registration-label">Registration date and time:</label>
+      <div class="output-time-date">
+        <p id="output-time-date-output" class="output-time-date-output"></p>
+      </div>
+    </div>
+
+    <!--Registration button-->
+    <div class="registration-button-container">
+      <button class="registration-button">Registration Time and Date</button>
+    </div>
+  </form>
+  
+  <!--Footer-->
+  <footer class="footer">
+    <p class="footer-text">Copyright &copy; Registration</p>
+  
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
+</html>
