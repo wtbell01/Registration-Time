@@ -2,39 +2,45 @@
 document.getElementById('registration-button').addEventListener('click',checkInput);
 
 
+
 function checkInput(e){
   //Declare variables
   let lastName = document.getElementById('last-name-input').value;
   let firstLetter = lastName[0].toUpperCase();
   let classificationButtons = document.getElementsByName('classification-button');
   let errorMessage = document.getElementById('error-message');
+  let outputTimeDate = document.getElementById('output-time-date-output');
+  //Letters variable holds a pattern that only accepts alpha characters(letters)
+  let letters = /^[a-zA-Z]+$/;
+  
   
   //Loop through classification buttons
   for(let i = 0; i < classificationButtons.length; i++){
-    /*if a button is checked and the first character of the last name is a string,
-    call displayResult function and don't display an error message*/
-    if(classificationButtons[i].checked && typeof firstLetter === 'string'){
+    
+    //if a button is checked and the first character of the last name is a letter - call displayResult function
+    if(classificationButtons[i].checked && firstLetter.match(letters)){
       errorMessage.textContent = "";
-      displayResult(firstLetter);
+      displayResult(firstLetter,outputTimeDate);
       break;
     }
     /*If a button isn't checked or the first character of the last name isn't a string,
     display error message*/
     else{
-      errorMessage.textContent = "*Enter last name and select classification*"
+      errorMessage.textContent = "*Enter last name and select classification*";
+      outputTimeDate.textContent= "";
     }
   } 
   e.preventDefault();
 }
 
 
-function displayResult(firstLetter){
+function displayResult(firstLetter,outputTimeDate){
   //Declare variables for buttons and registration output field
   let seniorButton= document.getElementById('senior-button');
   let juniorButton= document.getElementById('junior-button');
   let sophomoreButton= document.getElementById('sophomore-button');
   let freshmanButton= document.getElementById('freshman-button');
-  let outputTimeDate = document.getElementById('output-time-date-output');
+  
   
   /*Display registration dates and times depending on the button selected and first letter of the last name*/
   if(seniorButton.checked && firstLetter <="M"){
