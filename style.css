@@ -8,6 +8,7 @@
   --light-grey:#f3f3f3;
   --blue-violet:#7d14f4;
   --crimson-red:#bc1a16;
+  --site-white:#fff;
   
 }
 
@@ -35,6 +36,13 @@ a{
   text-decoration: none;
 }
 
+.banner{
+  background-color: var(--blue-violet);
+  color: var(--site-white);
+  text-align: center;
+  padding: .5rem 0;
+}
+
 /*Header Container*/
 .header-container{
   border-bottom: solid var(--white-smoke) thin;
@@ -47,13 +55,18 @@ a{
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  padding: 1.5rem 0 .5rem 0;
+  padding: .65rem 0;
 }
 
 /*Icon in the header logo*/
 .header-logo-top{
   text-align: center;
   font-size: 2.75rem;
+}
+
+/*Link on the header logo*/
+.header-logo-link{
+  color: var(--dark-slate-grey);
 }
 
 /*Text at the bottom of the header logo*/
