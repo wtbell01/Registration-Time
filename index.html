@@ -41,6 +41,14 @@
   <!--Register Title-->
   <h2 class="register-title">Register</h2>
 
+  <!--Instructions for the form-->
+  <div class="instructions-container">
+    <h2 class="instructions-text">Find your registration time by using the form below.</h2>
+    <h2 class="instructions-text">Enter your last name and select your classification to view the opening window for
+    registration.</h2>
+    <p class="instructions-text instructions-red-text">*Last name accepts alpha-characters(A-Z) only*</p>
+  </div>
+
   <!--Registration form-->
   <form id="registration-form" class="registration-form">
     <!--First section - Last name label and input-->
@@ -59,22 +67,22 @@
       <div class="classification-inputs">
         <!--Classification box - Holds Senior button and corresponing year-->
         <div class="classification-box">
-          <input type="radio" name="senior" id="senior-button" class="classification-button">
+          <input type="radio" name="classification-button" id="senior-button" class="classification-button">
           <label class="classification-label" for="senior-button">Senior</label>
         </div>
         <!--Classification box - Holds Junior button and corresponing year-->
         <div class="classification-box">
-          <input type="radio" name="junior" id="junior-button" class="classification-button">
+          <input type="radio" name="classification-button" id="junior-button" class="classification-button">
           <label class="classification-label" for="junior-button">Junior</label>
         </div>
         <!--Classification box - Holds Sophomore button and corresponing year-->
         <div class="classification-box">
-          <input type="radio" name="sophomore" id="sophomore-button" class="classification-button">
+          <input type="radio" name="classification-button" id="sophomore-button" class="classification-button">
           <label class="classification-label" for="sophomore-button">Sophomore</label>
         </div>
         <!--Classification box - Holds Freshman button and corresponing year-->
         <div class="classification-box">
-          <input type="radio" name="freshman" id="freshman-button" class="classification-button">
+          <input type="radio" name="classification-button" id="freshman-button" class="classification-button">
           <label class="classification-label" for="freshman-button">Freshman</label>
         </div>
       </div>
@@ -88,16 +96,18 @@
       </div>
     </div>
 
+    <!--Error Message for incorrect user input-->
+    <p id="error-message" class="error-message"></p>
+
     <!--Registration button-->
     <div class="registration-button-container">
-      <button class="registration-button">Registration Time and Date</button>
+      <button id="registration-button"class="registration-button">Registration Time and Date</button>
     </div>
   </form>
   
   <!--Footer-->
   <footer class="footer">
     <p class="footer-text">Copyright &copy; Registration</p>
-  
   </footer>
   
   <script src="main.js"></script>

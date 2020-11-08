@@ -2,10 +2,13 @@
 
 :root{
   --site-black:#000;
+  --dark-slate-grey:#053041;
   --white-smoke:#ebedee;
   --dark-slate-grey:#363738;
   --light-grey:#f3f3f3;
   --blue-violet:#7d14f4;
+  --crimson-red:#bc1a16;
+  
 }
 
 *{
@@ -94,31 +97,78 @@ a{
 .register-title{
   text-transform: uppercase;
   text-align: center;
-  margin: 5rem 0;
+  margin: 5rem 0 2rem 0;
   font-size: 2.5rem;
+}
+
+/*Instructions*/
+.instructions-container{
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.instructions-text{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: .75rem;
+}
+
+.instructions-red-text{
+  color: var(--crimson-red);
 }
 
 /*Registration form*/
 .registration-form{
-  width: 60%;
-  margin: 0 auto 15rem auto;
+  width: 50%;
+  margin: 4rem auto 15rem auto;
   display: flex;
   flex-direction: column;
 }
 
 .registration-section{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
+/*Lables on the registration form*/
 .registration-label{
-  text-align: end;
-  padding-right: 1rem;
+  margin-bottom: .25rem;
+}
+
+/*Last name input box*/
+.last-name-input{
+  padding: .85rem 0 .85rem .5rem;
+  font-size: 1.1rem;
+  letter-spacing: .05rem;
+}
+
+/*Remove dark outline on the last name input when clicked*/
+.last-name-input:focus{
+  outline: none;
+}
+
+/*Sets the classification label and input for each individual year to a flex display*/
+.classification-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/*Removes margin bottom from the last classification box(freshman)*/
+.classification-box:last-child{
+  margin-bottom: none;
+}
+
+.classification-label{
+  font-size: 1.05rem;
+  margin-left: .5rem;
 }
 
 .registration-button-container{
   text-align: center;
+  margin-top: 2rem;
 }
 
 .registration-button{
@@ -131,11 +181,19 @@ a{
   text-transform: uppercase;
 }
 
-.output-time-date-output{
+.output-time-date{
   background-color: var(--white-smoke);
   border: solid var(--site-black) thin;
-  padding: 1.25rem 0;
+  height: 6.5vh;
+  padding: .5rem 0 0 .5rem;
 }
+
+/*error message above registration button in case of an error*/
+.error-message{
+  color: var(--crimson-red);
+  text-align: center;
+}
+
 
 /*footer*/
 .footer{
@@ -143,4 +201,85 @@ a{
   color: white;
   padding: 1rem 0;
   text-align: center;
+}
+
+/*Media query*/
+@media(max-width:960px){
+  /*Header*/
+  .header{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0 .5rem 0;
+  }
+
+  .header-logo{
+    margin-bottom: .5rem;
+  }
+
+  /*Header menu containing list items*/
+  .header-menu{
+    width: 85%;
+  }
+
+
+  .header-search-bar-container{
+    display: none;
+  }
+}
+
+/*Media query for 600px*/
+@media(max-width:600px){
+
+  /*Header menu containing list items*/
+  .header-menu{
+    width: 95%;
+  }
+
+  .header-menu-list-item{
+    font-size: .65rem;
+  }
+
+  /*Register Title*/
+  .register-title{
+    font-size: 1.8rem;
+  }
+
+  /*Registration form*/
+  .registration-form{
+    width: 80%;
+  }
+
+}
+
+@media(max-width:415px){
+  /*Register Title*/
+  .register-title{
+    margin: 2.5rem 0 2rem 0;
+  }
+}
+
+@media(max-width:375px){
+
+  .header-menu{
+    width: 98%;
+  }
+  .header-menu-list-item{
+    font-size: .6rem;
+  }
+}
+
+@media(max-width:320px){
+  .header-menu-list-item{
+    font-size: .52rem;
+  }
+
+  /*Register Title*/
+  .register-title{
+    font-size: 1.2rem;
+  }
+
+  .instructions-text{
+    font-size: .9rem;
+    
+  }
 }
